@@ -55,8 +55,6 @@ int main(int argc, char *argv[])
 						ain1_latching_comparator,
 						ain1_comparator_queue_and_disable
 					  );
-	cout<<ain1.get_config_command()<<endl;
-	cout<<"AIN1: "<<ain1.adc_read()<<endl;
 
 	ain0.set_config_command(
 						ain0_operational_status, 
@@ -69,8 +67,12 @@ int main(int argc, char *argv[])
 						ain0_latching_comparator,
 						ain0_comparator_queue_and_disable
 					  );
+
+
 	cout<<ain0.get_config_command()<<endl;
 	cout<<"AIN0: "<<ain0.adc_read()<<endl;
+	cout<<ain1.get_config_command()<<endl;
+	cout<<"AIN1: "<<ain1.adc_read()<<endl;
 
 	return 0;
 }
