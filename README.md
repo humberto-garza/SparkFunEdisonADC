@@ -1,6 +1,3 @@
-# SparkFunEdisonADC
-SparkFun Block for Intel® Edison - ADC Arduino and C Libraries
-
 SparkFun Block for Intel® Edison - ADC!
 ===================
 
@@ -10,6 +7,35 @@ This is the hardware to use: [SparkFun Block for Intel® Edison - ADC - DEV-1304
 
 ----------
 
+The Code
+-------------
+This code is in my Github: [humberto-garza/SparkFunEdisonADC · GitHub](https://github.com/humberto-garza/SparkFunEdisonADC)
+
+----------
+
+Setting up the Block
+-------------
+In order to make this block work, you need to consider several things:
+> - You can use this block with the Arduino Breakout, the Mini-Breakout or by itself.
+> - You can use it from python, node, Arduino IDE, C or C++.
+> - Maximum Voltage Level:
+>  - -0.3 to (3.3) + 0.3
+
+	
+
+
+
+
+
+
+
+
+
+
+> - Your local documents are not shared between different browsers or computers.
+> - Clearing your browser's data may **delete all your local documents!** Make sure your documents are synchronized with **Google Drive** or **Dropbox** (check out the [<i class="icon-refresh"></i> Synchronization](#synchronization) section).
+
+----------
 
 
 
@@ -279,3 +305,6 @@ cond(no)->op
   [6]: http://highlightjs.org/
   [7]: http://bramp.github.io/js-sequence-diagrams/
   [8]: http://adrai.github.io/flowchart.js/
+
+
+----------
