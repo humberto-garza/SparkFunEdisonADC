@@ -10,6 +10,7 @@ This is the hardware to use: [SparkFun Block for Intel® Edison - ADC - DEV-1304
 The Code
 -------------
 This code is in my Github: [humberto-garza/SparkFunEdisonADC · GitHub](https://github.com/humberto-garza/SparkFunEdisonADC)
+You can find the Readme Document in the Intel Community here: https://communities.intel.com/docs/DOC-23992 (It may say "unauthorized", it can take a bit to be authorized, just check the github instead)
 
 ----------
 
@@ -20,291 +21,195 @@ In order to make this block work, you need to consider several things:
 > - You can use it from python, node, Arduino IDE, C or C++.
 > - Maximum Voltage Level:
 >  - -0.3 to (3.3) + 0.3
-
-	
-
-
-
-
-
-
-
-
-
-
-> - Your local documents are not shared between different browsers or computers.
-> - Clearing your browser's data may **delete all your local documents!** Make sure your documents are synchronized with **Google Drive** or **Dropbox** (check out the [<i class="icon-refresh"></i> Synchronization](#synchronization) section).
+>  - I am not sure about this one, check the [schematic](https://cdn.sparkfun.com/datasheets/Dev/Edison/ADC_Block.pdf).
+> - If you need to use the ADC with the Mini-breakout board you will need to cut off the J1 and J2 jumpers and solder the J1pins together.
+> - The Reference Voltage is configured by software
+> - If you need to use more than one configuration use the class offered with this sample C++ Library
 
 ----------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-StackEdit stores your documents in your browser, which means all your documents are automatically saved locally and are accessible **offline!**
-
-> **Note:**
-
-> - StackEdit is accessible offline after the application has been loaded for the first time.
-> - Your local documents are not shared between different browsers or computers.
-> - Clearing your browser's data may **delete all your local documents!** Make sure your documents are synchronized with **Google Drive** or **Dropbox** (check out the [<i class="icon-refresh"></i> Synchronization](#synchronization) section).
-
-#### <i class="icon-file"></i> Create a document
-
-The document panel is accessible using the <i class="icon-folder-open"></i> button in the navigation bar. You can create a new document by clicking <i class="icon-file"></i> **New document** in the document panel.
-
-#### <i class="icon-folder-open"></i> Switch to another document
-
-All your local documents are listed in the document panel. You can switch from one to another by clicking a document in the list or you can toggle documents using <kbd>Ctrl+[</kbd> and <kbd>Ctrl+]</kbd>.
-
-#### <i class="icon-pencil"></i> Rename a document
-
-You can rename the current document by clicking the document title in the navigation bar.
-
-#### <i class="icon-trash"></i> Delete a document
-
-You can delete the current document by clicking <i class="icon-trash"></i> **Delete document** in the document panel.
-
-#### <i class="icon-hdd"></i> Export a document
-
-You can save the current document to a file by clicking <i class="icon-hdd"></i> **Export to disk** from the <i class="icon-provider-stackedit"></i> menu panel.
-
-> **Tip:** Check out the [<i class="icon-upload"></i> Publish a document](#publish-a-document) section for a description of the different output formats.
-
-
-----------
-
-
-Synchronization
--------------------
-
-StackEdit can be combined with <i class="icon-provider-gdrive"></i> **Google Drive** and <i class="icon-provider-dropbox"></i> **Dropbox** to have your documents saved in the *Cloud*. The synchronization mechanism takes care of uploading your modifications or downloading the latest version of your documents.
-
-> **Note:**
-
-> - Full access to **Google Drive** or **Dropbox** is required to be able to import any document in StackEdit. Permission restrictions can be configured in the settings.
-> - Imported documents are downloaded in your browser and are not transmitted to a server.
-> - If you experience problems saving your documents on Google Drive, check and optionally disable browser extensions, such as Disconnect.
-
-#### <i class="icon-refresh"></i> Open a document
-
-You can open a document from <i class="icon-provider-gdrive"></i> **Google Drive** or the <i class="icon-provider-dropbox"></i> **Dropbox** by opening the <i class="icon-refresh"></i> **Synchronize** sub-menu and by clicking **Open from...**. Once opened, any modification in your document will be automatically synchronized with the file in your **Google Drive** / **Dropbox** account.
-
-#### <i class="icon-refresh"></i> Save a document
-
-You can save any document by opening the <i class="icon-refresh"></i> **Synchronize** sub-menu and by clicking **Save on...**. Even if your document is already synchronized with **Google Drive** or **Dropbox**, you can export it to a another location. StackEdit can synchronize one document with multiple locations and accounts.
-
-#### <i class="icon-refresh"></i> Synchronize a document
-
-Once your document is linked to a <i class="icon-provider-gdrive"></i> **Google Drive** or a <i class="icon-provider-dropbox"></i> **Dropbox** file, StackEdit will periodically (every 3 minutes) synchronize it by downloading/uploading any modification. A merge will be performed if necessary and conflicts will be detected.
-
-If you just have modified your document and you want to force the synchronization, click the <i class="icon-refresh"></i> button in the navigation bar.
-
-> **Note:** The <i class="icon-refresh"></i> button is disabled when you have no document to synchronize.
-
-#### <i class="icon-refresh"></i> Manage document synchronization
-
-Since one document can be synchronized with multiple locations, you can list and manage synchronized locations by clicking <i class="icon-refresh"></i> **Manage synchronization** in the <i class="icon-refresh"></i> **Synchronize** sub-menu. This will let you remove synchronization locations that are associated to your document.
-
-> **Note:** If you delete the file from **Google Drive** or from **Dropbox**, the document will no longer be synchronized with that location.
-
-----------
-
-
-Publication
+Version
 -------------
 
-Once you are happy with your document, you can publish it on different websites directly from StackEdit. As for now, StackEdit can publish on **Blogger**, **Dropbox**, **Gist**, **GitHub**, **Google Drive**, **Tumblr**, **WordPress** and on any SSH server.
+ - Make sure that you download the latest [Intel Edison Image](http://www.intel.com/support/edison/sb/CS-035180.htm)
+ - If you don't know how to flash this image you can make use of this short [tutorial](http://www.intel.com/support/edison/sb/CS-035286.htm) (Windows, MAC and Linux)
+ - If you will use this with the **IoTKit Analytics Platform** make sure that you are using a the **version 1.5.2 or later**. In order to know your version and update it follow these steps:
+```
+iotkit-admin -V
+npm update -g iotkit-agent
+```
+ - If you do not have a default installed [iotkit-agent](https://github.com/enableiot/iotkit-agent) run this command:
+```
+npm install iotkit-agent
+```
+ - If your npm is giving you problems try and update it:
+```
+npm install -g npm
+```
+ - Just in case you want to use the [MRAA Library](http://iotdk.intel.com/docs/master/mraa/index.html) (useful to work with the GPIOs, UART, I2C and so on) you can install it with this command. You can communicate with the ADC directly using this library but I used the system commands in order to make it more simple and easier to move to other languages.
+```
+npm install mraa
+```
+----------
 
-#### <i class="icon-upload"></i> Publish a document
-
-You can publish your document by opening the <i class="icon-upload"></i> **Publish** sub-menu and by choosing a website. In the dialog box, you can choose the publication format:
-
-- Markdown, to publish the Markdown text on a website that can interpret it (**GitHub** for instance),
-- HTML, to publish the document converted into HTML (on a blog for example),
-- Template, to have a full control of the output.
-
-> **Note:** The default template is a simple webpage wrapping your document in HTML format. You can customize it in the **Advanced** tab of the <i class="icon-cog"></i> **Settings** dialog.
-
-#### <i class="icon-upload"></i> Update a publication
-
-After publishing, StackEdit will keep your document linked to that publication which makes it easy for you to update it. Once you have modified your document and you want to update your publication, click on the <i class="icon-upload"></i> button in the navigation bar.
-
-> **Note:** The <i class="icon-upload"></i> button is disabled when your document has not been published yet.
-
-#### <i class="icon-upload"></i> Manage document publication
-
-Since one document can be published on multiple locations, you can list and manage publish locations by clicking <i class="icon-upload"></i> **Manage publication** in the <i class="icon-provider-stackedit"></i> menu panel. This will let you remove publication locations that are associated to your document.
-
-> **Note:** If the file has been removed from the website or the blog, the document will no longer be published on that location.
+Compile
+-------------
+To copile the main.cpp file just execute this command:
+```
+g++ main.cpp
+```
+This command will create an executable program called "a.out" (default executable target name).
+You can change it if you want, follow this [reference](http://www.cs.fsu.edu/~jestes/howto/g++compiling.txt) for more information.
 
 ----------
 
+The Library
+-------------
 
-Markdown Extra
---------------------
+**Main.cpp**
+There is a declaration of several variables as ain0_operational status. This variables are used to configure the ADC according to what you want to read from the Analog inputs.
+The program has a class named ADC; when you create an ADC object you have to specify its configuration variables. The Default configuration will read only the AN0 comparing it to a Maximum of 4.096V. This main.cpp shows how to use 2 objects to read 2 different analog inputs, you can even declare an object to subtract (compare)  these inputs or even change the reference voltage.
 
-StackEdit supports **Markdown Extra**, which extends **Markdown** syntax with some nice features.
+The meaning of this values is specified in the Spark_ADC.cpp file and as follows:
 
-> **Tip:** You can disable any **Markdown Extra** feature in the **Extensions** tab of the <i class="icon-cog"></i> **Settings** dialog.
+***** -> Represents the suggested configuration to only read from A1N0 and the constructor defaults
 
-> **Note:** You can find more information about **Markdown** syntax [here][2] and **Markdown Extra** extension [here][3].
+> **int os:  Operational status/single-shot conversion start.**
 
+> - This bit determines the operational status of the device.
+> - This bit can only be written when in power-down mode.
+> - Write status:
+>  - 0x0: No Effect.
+>  - 0x1: Begin single conversion (when in power-down mode). *****
+> - Read status
+>  - 0x0: Device is currently performing a conversion.
+>  - 0x1: Device is not currently performing a conversion.
 
-### Tables
+___
+> **int imc: Input multiplexer**  
 
-**Markdown Extra** has a special syntax for tables:
-
-Item     | Value
--------- | ---
-Computer | $1600
-Phone    | $12
-Pipe     | $1
-
-You can specify column alignment with one or two colons:
-
-| Item     | Value | Qty   |
-| :------- | ----: | :---: |
-| Computer | $1600 |  5    |
-| Phone    | $12   |  12   |
-| Pipe     | $1    |  234  |
-
-
-### Definition Lists
-
-**Markdown Extra** has a special syntax for definition lists too:
-
-Term 1
-Term 2
-:   Definition A
-:   Definition B
-
-Term 3
-
-:   Definition C
-
-:   Definition D
-
-	> part of definition D
+> - These bits configure the input multiplexer.
+> - VIN (AINX minus AINY)
+>  - 0x000: AIN0 - AIN1
+>  - 0x001: AIN0 - AIN3
+>  - 0x010: AIN1 - AIN3
+>  - 0x011: AIN2 - AIN3
+>  - 0x100: AIN0 - GND *****
+>  - 0x101: AIN1 - GND
+>  - 0x110: AIN2 - GND
+>  - 0x111: AIN3 - GND
 
 
-### Fenced code blocks
+___
+> **int pga:          Programmable gain amplifier configuration***
 
-GitHub's fenced code blocks are also supported with **Highlight.js** syntax highlighting:
+> - These bits configure the programmable gain amplifier.
+> - FS:
+>  - 0x000: +-6.144V
+>  - 0x001: +-4.096V *****
+>  - 0x010: +-2.048V
+>  - 0x011: +-1.024V
+>  - 0x100: +-0.512V
+>  - 0x101: +-0.256V
+>  - 0x110: +-0.256V
+>  - 0x111: +-0.256V
 
-```
-// Foo
-var bar = 0;
-```
+___
+> **int mode:        Device operating mode**
 
-> **Tip:** To use **Prettify** instead of **Highlight.js**, just configure the **Markdown Extra** extension in the <i class="icon-cog"></i> **Settings** dialog.
+> - This bit controls the current operational mode:
+>  - 0x0: Continuous conversion mode. *****
+>  - 0x1: Power-Down single-shot mode.
 
-> **Note:** You can find more information:
+___ 
+> **int rate:           Data rate**
 
-> - about **Prettify** syntax highlighting [here][5],
-> - about **Highlight.js** syntax highlighting [here][6].
+>  - These bits control the data rate setting:
+>   - 0x000: 128SPS
+>   - 0x001: 250SPS
+>   - 0x010: 490SPS
+>   - 0x011: 920SPS
+>   - 0x100: 1600SPS *****
+>   - 0x101: 2400SPS
+>   - 0x110: 3300SPS
+>   - 0x111: 3300SPS
+ 
+___ 
 
+> **int comp_mode: Comparator mode**
 
-### Footnotes
+> - This bit controls the comparator mode of operation.
+> - It changes whether the comparator is implemented as a traditional comparator or as a window comparator:
+>  - 0x0: Traditional comparator with hysteresis. *****
+>  - 0x1: Window comparator.
 
-You can create footnotes like this[^footnote].
+___
+> **int comp_pol: Comparator polarity**
 
-  [^footnote]: Here is the *text* of the **footnote**.
+> - This but controls the polarity of the ALERT/RDY pin:
+>  - 0x0: Comparator output is active low. *****
+>  - 0x1: ALERT/RDY pin is active high.
+ 
+___
+> **int comp_lat:  Latching comparator**
 
+> - This bit controls whether the ALERT/RDY pin latches once asserted or clears once conversions are within the margin of the upper and lower threshold values:
+>  - 0x0: The comparator output is active low. *****
+>  - 0x1: ALERT/RDY pin is active high.
+ 
+> **int comp_que: Comparator queue and disable**
 
-### SmartyPants
+> - These bits perform two functions:
+>  - 0x11: Disable the comparator function and put the ALERT/RDY pin into a high state. *****
+> - Otherwise they control the number of successive conversions exceeding the upper or lower thresholds required before asserting the ALERT/RDY pin.
+>  - 0x00: Assert after one conversion.
+>  - 0x01: Assert after two conversions.
+>  - 0x10: Assert after four conversions
+ 
+After you specify the configuration bits, you can create an ADC Object.
+Within the main 2 ADC objects are created: ain0 and ain1.
+In order to configure the object you need to call the function "set_config_command".
+After the object is configured you can still check the configuration parameters using the function "get_config_command"
+In order to read from the ADC using the object configuration the function "adc_read" needs to be called.
 
-SmartyPants converts ASCII punctuation characters into "smart" typographic punctuation HTML entities. For example:
+> ***set_config_command(...)***
 
-|                  | ASCII                        | HTML              |
- ----------------- | ---------------------------- | ------------------
-| Single backticks | `'Isn't this fun?'`            | 'Isn't this fun?' |
-| Quotes           | `"Isn't this fun?"`            | "Isn't this fun?" |
-| Dashes           | `-- is en-dash, --- is em-dash` | -- is en-dash, --- is em-dash |
+> - This function is the one that will set the specific string to configure the ADC according to what is specified. This will receive some binary parameters in this order:
+> - set_config_command(
+>  - int os, 
+>  - int imc, 
+>  - int pga, 
+>  - int mode, 
+>  - int rate, 
+>  - int comp_mode, 
+>  - int comp_pol, 
+>  - int comp_lat, 
+>  - int comp_que)
+> - An example to declare a value comes as follows:
+int os = 0b0
+> - And the specifications for this value can be checked in this documentation.
+> - You will not need to worry about setting the configuration of the ADC over and over again every time you want to read a different Analog pin or read a different configuration. 
+ > - The configuration string is kept in the object and when you call the "adc_read" it will configure it for you before reading it.
 
+____
+>***adc_read()***
 
-### Table of contents
+> - This command will configure the ADC with the specified parameters; after that, it will read the answer from the ADC, put the reply in the proper order and then return in an integer the value. 
+> - Keep in mind that you may need to do some math in order to use this data; this is the raw data coming from the ADC but put in order
 
-You can insert a table of contents using the marker `[TOC]`:
+ ___
+ 
+ 
+>***get_config_command()***
 
-[TOC]
-
-
-### MathJax
-
-You can rende   r *LaTeX* mathematical expressions using **MathJax**, as on [math.stackexchange.com][1]:
-
-The *Gamma function* satisfying $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$ is via the Euler integral
-
-$$
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
-$$
-
-> **Tip:** To make sure mathematical expressions are rendered properly on your website, include **MathJax** into your template:
-
-```
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-```
-
-> **Note:** You can find more information about **LaTeX** mathematical expressions [here][4].
-SparkFun Block for Intel® Edison - ADC - DEV-13046 - SparkFun Electronics
-
-### UML diagrams
-
-You can also render sequence diagrams like this:
-
-```sequence
-Alice->Bob: Hello Bob, how are you?
-Note right of Bob: Bob thinks
-Bob-->Alice: I am good thanks!
-```
-
-And flow charts like this:
-
-```flow
-st=>start: Start
-e=>end
-op=>operation: My Operation
-cond=>condition: Yes or No?
-
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
-
-> **Note:** You can find more information:
-
-> - about **Sequence diagrams** syntax [here][7],
-> - about **Flow charts** syntax [here][8].
-
-### Support StackEdit
-
-[![](https://cdn.monetizejs.com/resources/button-32.png)](https://monetizejs.com/authorize?client_id=ESTHdCYOi18iLhhO&summary=true)
-
-  [^stackedit]: [StackEdit](https://stackedit.io/) is a full-featured, open-source Markdown editor based on PageDown, the Markdown library used by Stack Overflow and the other Stack Exchange sites.
-
-
-  [1]: http://math.stackexchange.com/
-  [2]: http://daringfireball.net/projects/markdown/syntax "Markdown"
-  [3]: https://github.com/jmcmanus/pagedown-extra "Pagedown Extra"
-  [4]: http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
-  [5]: https://code.google.com/p/google-code-prettify/
-  [6]: http://highlightjs.org/
-  [7]: http://bramp.github.io/js-sequence-diagrams/
-  [8]: http://adrai.github.io/flowchart.js/
+> - This function will only return the command that is being used to configure the ADC, it can be helpful to check in real time what you have just configured.
 
 
-----------
+Last Comments
+-------------------
+
+> - This library is configured to work with the default factory circuit. It works with the I2C 0x48 address, it can be modified to work with any other address just by changing some lines in the ***Spark_ADC.cpp***; contact me if you need some guidance
+> - I could write the Arduino library if you need it. Just ask for it
+> - If you need some help to uderstand how do the objects and classes work, here you can find some quick guide: [C++ classes and objects](http://www.cplusplus.com/doc/tutorial/classes/)
+
+___
