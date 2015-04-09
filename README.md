@@ -72,7 +72,7 @@ The program has a class named ADC; when you create an ADC object you have to spe
 
 The meaning of this values is specified in the Spark_ADC.cpp file and as follows:
 
-* Represents the suggested configuration to only read from A1N0 and the constructor defaults
+). ***** Represents the suggested configuration to only read from A1N0 and the constructor defaults
 
 > **int os:  Operational status/single-shot conversion start.**
 
@@ -80,7 +80,7 @@ The meaning of this values is specified in the Spark_ADC.cpp file and as follows
 > - This bit can only be written when in power-down mode.
 > - Write status:
 >  - 0x0: No Effect.
->  - 0x1: Begin single conversion (when in power-down mode). *****
+>  - 0x1: Begin single conversion (when in power-down mode). ). *****
 > - Read status
 >  - 0x0: Device is currently performing a conversion.
 >  - 0x1: Device is not currently performing a conversion.
