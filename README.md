@@ -72,7 +72,7 @@ The program has a class named ADC; when you create an ADC object you have to spe
 
 The meaning of this values is specified in the Spark_ADC.cpp file and as follows:
 
-***** Represents the suggested configuration to only read from A1N0 and the constructor defaults
+* Represents the suggested configuration to only read from A1N0 and the constructor defaults
 
 > **int os:  Operational status/single-shot conversion start.**
 
@@ -204,7 +204,7 @@ ____
 
 > - This function will only return the command that is being used to configure the ADC, it can be helpful to check in real time what you have just configured.
 
-
+----------
 Last Comments
 -------------------
 
