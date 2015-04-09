@@ -10,7 +10,7 @@ This is the hardware to use: [SparkFun Block for Intel® Edison - ADC - DEV-1304
 The Code
 -------------
 This code is in my Github: [humberto-garza/SparkFunEdisonADC · GitHub](https://github.com/humberto-garza/SparkFunEdisonADC)
-You can find the Readme Document in the Intel Community here: https://communities.intel.com/docs/DOC-23992 (It may say "unauthorized", it can take a bit to be authorized, just check the github instead)
+You can find the Readme Document in the Intel Community here: https://communities.intel.com/docs/DOC-23992 
 
 ----------
 
