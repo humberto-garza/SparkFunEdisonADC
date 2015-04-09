@@ -1,4 +1,4 @@
-SparkFun Block for Intel® Edison - ADC!
+SparkFun Block for Intel® Edison - ADC TUTORIAL!
 ===================
 
 The Hardware
