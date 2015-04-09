@@ -11,6 +11,7 @@ The Code
 -------------
 This code is in my Github: [humberto-garza/SparkFunEdisonADC · GitHub](https://github.com/humberto-garza/SparkFunEdisonADC)
 You can find the Readme Document in the Intel Community here: https://communities.intel.com/docs/DOC-23992 
+And the Discussion Can be found here: https://communities.intel.com/message/290450#290450
 
 ----------
 
