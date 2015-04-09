@@ -63,6 +63,16 @@ You can change it if you want, follow this [reference](http://www.cs.fsu.edu/~je
 
 ----------
 
+Execute
+-------------
+To execute the program, execute these commands in the linux(yocto) command line (considering your output file is called "a.out"):
+
+```
+chmod +x a.out
+./a.out
+```
+----------
+
 The Library
 -------------
 
