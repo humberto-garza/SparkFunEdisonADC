@@ -1,6 +1,18 @@
 SparkFun Block for Intel® Edison - ADC TUTORIAL!
 ===================
 
+Updates!!!!!
+-------------
+> - You can connect two different inputs and configure the ADC to display the difference between them, even with negative numbers! Check this page for more information about the internal hardware [ADS1015 Page 11](http://www.ti.com.cn/cn/lit/ds/symlink/ads1015-q1.pdf) 
+
+----------
+
+
+Updates!
+
+
+
+
 The Hardware
 -------------
 This is the hardware to use: [SparkFun Block for Intel® Edison - ADC - DEV-13046 - SparkFun Electronics](https://www.sparkfun.com/products/13046)
