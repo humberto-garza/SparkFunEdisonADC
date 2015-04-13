@@ -135,14 +135,22 @@ int Adc::adc_read()
 	else
 	{
 		std::fgets(buffer, sizeof buffer, fpipe);
-		result += buffer[0];
-		result += buffer[1];
-		result += buffer[3];
+		result += buffer[0]; //0
+		result += buffer[1]; //x 
+		result += buffer[3]; //0
 		result += buffer[4];
 		result += buffer[5];
 		result += buffer[2];
+
+		unsigned int x = strtol(result.c_str(), NULL, 16);
 		pclose(fpipe);
-		return (int)strtol(result.c_str(), NULL, 16);
+		if(x > 0x7FF)
+		{
+			int aux =  -1*(~x-0xFFFFF000);
+			return aux;
+		}
+		else
+			return  x;
 	}
 }
 
