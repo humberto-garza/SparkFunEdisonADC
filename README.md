@@ -44,7 +44,7 @@ Version
 
  - Make sure that you download the latest [Intel Edison Image](http://www.intel.com/support/edison/sb/CS-035180.htm)
  - If you don't know how to flash this image you can make use of this short [tutorial](http://www.intel.com/support/edison/sb/CS-035286.htm) (Windows, MAC and Linux)
- - If you will use this with the **IoTKit Analytics Platform** make sure that you are using a the **version 1.5.2 or later**. In order to know your version and update it follow these steps:
+ - If you will use this with the **IoTKit Analytics Platform** make sure that you are using the **version 1.5.2 or later**. In order to know your version and update it follow these steps:
 ```
 iotkit-admin -V
 npm update -g iotkit-agent
