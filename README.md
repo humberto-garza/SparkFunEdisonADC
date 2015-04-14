@@ -3,7 +3,8 @@ SparkFun Block for Intel® Edison - ADC TUTORIAL!
 
 Updates!!!!!
 -------------
-> - You can connect two different inputs and configure the ADC to display the difference between them, even with negative numbers! Check this page for more information about the internal hardware [ADS1015 Page 11](http://www.ti.com.cn/cn/lit/ds/symlink/ads1015-q1.pdf) 
+> - You can connect two different inputs and configure the ADC to display the difference between them, even with negative numbers! Check this page for more information about the internal hardware [ADS1015 Page 11](http://www.ti.com.cn/cn/lit/ds/symlink/ads1015-q1.pdf). (April/13/2015)
+> - There is now an available Python library! it has basically the same behaviour as the C++ library, same functions and explanation, you can see the "Compile" section to read how to get it working. (April/14/2015)
 
 ----------
 
@@ -75,6 +76,11 @@ g++ main.cpp
 ```
 This command will create an executable program called "a.out" (default executable target name).
 You can change it if you want, follow this [reference](http://www.cs.fsu.edu/~jestes/howto/g++compiling.txt) for more information.
+
+To execute the Python code you only need to do this from within the folder where both the **main.py** and the **Spark_ADC.py** files are located>
+```
+python main.py
+```
 
 ----------
 
