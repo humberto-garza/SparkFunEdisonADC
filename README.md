@@ -3,8 +3,8 @@ SparkFun Block for Intel® Edison - ADC TUTORIAL!
 
 Updates!!!!!
 -------------
-> - You can connect two different inputs and configure the ADC to display the difference between them, even with negative numbers! Check this page for more information about the internal hardware [ADS1015 Page 11](http://www.ti.com.cn/cn/lit/ds/symlink/ads1015-q1.pdf). (April/13/2015)
-> - There is now an available Python library! it has basically the same behaviour as the C++ library, same functions and explanation, you can see the "Compile" section to read how to get it working. (April/14/2015)
+> - You can connect two different inputs and configure the ADC to display the **difference** between them, even with **negative numbers**! Check this page for more information about the internal hardware [ADS1015 Page 11](http://www.ti.com.cn/cn/lit/ds/symlink/ads1015-q1.pdf). (April/13/2015)
+> - There is now an available **Python library**! it has basically the same behaviour as the C++ library, same functions and explanation, you can see the "Compile" section to read how to get it working. (April/14/2015)
 
 ----------
 
