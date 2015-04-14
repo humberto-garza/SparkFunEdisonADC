@@ -6,16 +6,15 @@ class Adc:
 		self.command = command
 
 	def set_config_command(self, os, imc, pga, mode, rate, comp_mode, comp_pol, comp_lat, comp_que):
-		rate = rate 			<< 13
+		rate = rate 		<< 13
 		comp_mode = comp_mode 	<< 12
 		comp_pol = comp_pol 	<< 11
 		comp_lat = comp_lat 	<< 10
 		comp_que = comp_que 	<< 8
-		os = os 				<< 7
-		imc = imc 				<< 4
-		pga = pga 				<< 1
-		#mode = mode 			<< 0 
-		
+		os = os 		<< 7
+		imc = imc 		<< 4
+		pga = pga 		<< 1
+		#mode = mode 		<< 0 
 		total = os + imc + pga + mode + rate + comp_mode + comp_pol + comp_lat + comp_que
 		self.command = "i2cset -y 1 0x48 1 " + hex(total) + " w"
 
