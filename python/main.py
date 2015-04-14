@@ -1,14 +1,14 @@
 from Spark_ADC import Adc
 
-ain0_operational_status = 							0b0
-ain0_input_multiplexer_configuration = 				0b100
+ain0_operational_status = 				0b0
+ain0_input_multiplexer_configuration = 			0b100
 ain0_programmable_gain_amplifier_configuration =	0b010
-ain0_device_operating_mode =						0b0
-ain0_date_rate =									0b100
-ain0_comparator_mode = 								0b0
-ain0_compulator_polarity = 							0b0
-ain0_latching_comparator	=						0b0
-ain0_comparator_queue_and_disable =					0b11
+ain0_device_operating_mode =				0b0
+ain0_date_rate =					0b100
+ain0_comparator_mode = 					0b0
+ain0_compulator_polarity = 				0b0
+ain0_latching_comparator	=			0b0
+ain0_comparator_queue_and_disable =			0b11
 
 
 pt1 = Adc()
