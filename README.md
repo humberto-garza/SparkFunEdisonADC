@@ -65,16 +65,17 @@ npm install mraa
 
 Compile
 -------------
-> - C++
-To copile the main.cpp file just execute this command:
+> C++
+
+> - To copile the main.cpp file just execute this command:
 ```
 g++ main.cpp
 ```
-This command will create an executable program called "a.out" (default executable target name).
+> - This command will create an executable program called "a.out" (default executable target name).
 You can change it if you want, follow this [reference](http://www.cs.fsu.edu/~jestes/howto/g++compiling.txt) for more information.
 
- > - Python
-To execute the Python code you only need to do this from within the folder where both the **main.py** and the **Spark_ADC.py** files are located>
+ > Python
+> - To execute the Python code you only need to do this from within the folder where both the **main.py** and the **Spark_ADC.py** files are located>
 ```
 python main.py
 ```
