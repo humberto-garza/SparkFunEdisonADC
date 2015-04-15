@@ -3,7 +3,7 @@ Intel Edison SparkfunADC Arduino Library
 
 Description
 -------------
-Library to get to use the SparkfunADC Edison Block from the Arduino IDE without the Arduino Edison Breakout board
+Library to get to use the SparkfunADC Edison Block from the Arduino IDE with or without the Arduino Edison Breakout board
 
 ----------
 
