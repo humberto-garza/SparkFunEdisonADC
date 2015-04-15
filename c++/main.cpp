@@ -68,7 +68,6 @@ int main(int argc, char *argv[])
 				ain0_comparator_queue_and_disable
 				);
 
-
 	cout<<ain0.get_config_command()<<endl;
 	cout<<"AIN0: "<<ain0.adc_read()<<endl;
 	cout<<ain1.get_config_command()<<endl;
