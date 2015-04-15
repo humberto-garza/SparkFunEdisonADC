@@ -10,7 +10,6 @@ ain0_compulator_polarity = 				0b0
 ain0_latching_comparator	=			0b0
 ain0_comparator_queue_and_disable =			0b11
 
-
 pt1 = Adc()
 pt1.set_config_command(
 						ain0_operational_status, 
