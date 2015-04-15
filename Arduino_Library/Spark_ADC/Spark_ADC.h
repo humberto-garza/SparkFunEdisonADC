@@ -3,26 +3,23 @@
   Created by Jose Humberto Garza Rosado, April 15, 2015.
   Released into the public domain.
 */
-#ifndef SPARK_ADC_H
-#define SPARK_ADC_H
 
-#include <string.h>
-#include <iostream>
+#ifndef Spark_ADC_h
+#define Spark_ADC_h
 
-typedef unsigned char byte;
+#include <string>
+#include "Arduino.h"
+
 class Adc 
 {
 	public:
 		Adc();
-		//~Adc();	//Destructor 
 		void set_config_command(int os, int imc, int pga, int mode, int rate, int comp_mode, int comp_pol, int comp_lat, int comp_que);
-		std::string get_config_command();
+		String get_config_command();
 		int adc_read();
 
 	private:
 		std::string command;
-
 };
 
 #endif
-

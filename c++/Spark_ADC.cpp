@@ -1,3 +1,8 @@
+/*
+  Spark_ADC.cpp - Library for using the Sparkfun ADC BLock for Intel Edison+
+  Created by Jose Humberto Garza Rosado, April 15, 2015.
+  Released into the public domain.
+*/
 //////////////////////////////////////////////////////////////////
 #include "Spark_ADC.h"
 #include <stdlib.h>
@@ -97,7 +102,6 @@ Adc::Adc()
 //						0x01: Assert after two conversions.
 //						0x10: Assert after four conversions.
 
-// Return Value 0 for success, -1 otherwise
 void Adc::set_config_command(int os, int imc, int pga, int mode, int rate, int comp_mode, int comp_pol, int comp_lat, int comp_que)
 {
 	comp_mode = comp_mode << 12;
