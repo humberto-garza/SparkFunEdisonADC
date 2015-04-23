@@ -130,11 +130,12 @@ int Adc::adc_read()
 	system(command.c_str());
 	char buffer[10];
 	string result = "";
+	//i2cset -y 1 0x48 1 0x8344 w
 	FILE* fpipe = popen("i2cget -y 1 0x48 0 w", "r");
 	if (not fpipe) 
 	{
 		pclose(fpipe);
-	    result = -1;
+	    return -1;
 	}	
 	else
 	{
