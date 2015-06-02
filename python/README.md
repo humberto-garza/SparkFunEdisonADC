@@ -16,15 +16,15 @@ References
 Information
 -------------
 > - To change the configuration just open the **config.py** file and change the variables displayed:
-operational_status =						 0b0
-input_multiplexer_configuration =			 0b100
-programmable_gain_amplifier_configuration = 010
-device_operating_mode =					 0b0
-data_rate =								 0b100
-comparator_mode = 							 0b0
-compulator_polarity = 						 0b0
-latching_comparator	=					 0b0
-comparator_queue_and_disable =			 	 0b11
+ - operational_status =						 0b0
+ - input_multiplexer_configuration =			 0b100
+ - programmable_gain_amplifier_configuration = 010
+ - device_operating_mode =					 0b0
+ - data_rate =								 0b100
+ - comparator_mode = 							 0b0
+ - compulator_polarity = 						 0b0
+ - latching_comparator	=					 0b0
+ - comparator_queue_and_disable =			 	 0b11
 
 For example:
 > - If you want to read only from the AIN0 you must change the **input_multiplexer_configuration** to **0b100**
@@ -46,4 +46,5 @@ Comments
 > - This configuration can be changed even while the MCU is running the reading.
 > - If you are reading data from the MCU you just need to execute the respective command to make sure you get what you want
 > - Make sure that the **Spark_ADC.py** file is in the same folder
+
 ----------
