@@ -24,7 +24,7 @@ Follow thos diagram to make the right connections:
 Information
 -------------
 Follow These steps:
-> - Once you have setup the Eclipse IDE to program your MCU and make sure it works, paste the code provided **muc_ADC.c** in a new MCU project
+> - Once you have setup the Eclipse IDE to program your MCU and make sure it works, paste the code provided **mcu_ADC.c** in a new MCU project
 > - Make sure to save the project before proceeding 
 > - Go to **Project>Clean** and clean all
 > - Go to **MCU>Build Project**
