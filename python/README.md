@@ -26,11 +26,11 @@ Information
  - latching_comparator	=					 0b0
  - comparator_queue_and_disable =			 	 0b11
 
-For example:
-> - If you want to read only from the AIN0 you must change the **input_multiplexer_configuration** to **0b100**
-> - If you want to read the difference of AIN0 and AIN3 you must change the **input_multiplexer_configuration** to **0b001**
-> - If you want to change the samples per second to **128SPS** change the **data_rate** to **0b000**
-> - If you want to change the Reference Voltage to **+-2.048V** you must change the **programmable_gain_amplifier_configuration** to **0b010**
+> - For example:
+ - If you want to read only from the AIN0 you must change the **input_multiplexer_configuration** to **0b100**
+ - If you want to read the difference of AIN0 and AIN3 you must change the **input_multiplexer_configuration** to **0b001**
+ - If you want to change the samples per second to **128SPS** change the **data_rate** to **0b000**
+ - If you want to change the Reference Voltage to **+-2.048V** you must change the **programmable_gain_amplifier_configuration** to **0b010**
 
 > - Once You have modified the respective variables, just run the **config.py** and it will print the string to configure the ADC as you have specified, for example:
 ```
