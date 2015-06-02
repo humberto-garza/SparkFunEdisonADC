@@ -44,6 +44,6 @@ Comments
 > - Make sure that the MCU IDE is working with your board correctly before you try this code.
 > - This sample code will work for this configuration, if you want to use different configurations for the ADC inputs, you can just change this command **"i2cset -y 1 0x48 1 0xe312 w"** 
 > - Specifically you need to change the 0xe312 part
-> - If you need some help to change the command to the desired configuration, go to the Python [folder](https://github.com/humberto-garza/SparkFunEdisonADC/tree/master/python) to get some help.
+> - If you need some help to change the command to the desired configuration, go to the  [Python Folder](https://github.com/humberto-garza/SparkFunEdisonADC/tree/master/python) to get some help.
 
 ----------
