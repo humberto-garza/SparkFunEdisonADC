@@ -16,7 +16,7 @@ References
 
 Seting Up
 -------------
-Follow thos diagram to make the right connections:
+Follow this diagram to make the right connections:
 ![alt tag](https://github.com/humberto-garza/SparkFunEdisonADC/blob/master/Diagrams/Sketch_MCU_ADC.jpg)
 
 ----------
