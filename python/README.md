@@ -44,7 +44,7 @@ i2cset -y 1 0x48 1 0xe312 w
 Comments
 -------------
 > - This configuration can be changed even while the MCU is running the reading.
-> - If you are reading data from the MCU you just need to execute the respective command to make sure you get what you want
+> - If you are reading data from the MCU you just need to execute the returned command in the Atom to make sure you are reading what you want
 > - Make sure that the **Spark_ADC.py** file is in the same folder
 
 ----------
