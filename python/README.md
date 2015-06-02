@@ -4,6 +4,7 @@ Change the Configuration of the ADC Inputs
 Description
 -------------
 This tutorial will help you modify the configuration command for the ADC 
+
 ----------
 
 References
