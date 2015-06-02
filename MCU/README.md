@@ -45,5 +45,6 @@ Comments
 > - This sample code will work for this configuration, if you want to use different configurations for the ADC inputs, you can just change this command **"i2cset -y 1 0x48 1 0xe312 w"** 
 > - Specifically you need to change the **0xe312** part
 > - If you need some help to change the command to the desired configuration, go to the  [Python Folder](https://github.com/humberto-garza/SparkFunEdisonADC/tree/master/python) to get some help.
+> - If you read the ADC while the MCU is communicating with it, you will get some **Reading Errors**, so make sure that you are only using it with either the Atom or the MCU, never at the same time.
 
 ----------
