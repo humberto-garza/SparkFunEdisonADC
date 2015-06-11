@@ -82,6 +82,7 @@ The Library
 =================
 
 **Main**
+
 You can create as many objects as you please to have different configurations, for example: have one to read AIN0, another to read AIN1 and another one to read the difference of AIN0-AIN1.
 
 There is a declaration of several variables as ain0_operational status. This variables are used to configure the ADC according to what you want to read from the Analog inputs.
