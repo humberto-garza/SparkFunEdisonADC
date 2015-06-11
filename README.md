@@ -13,6 +13,9 @@ Index
   * [Execution](#execution)
   * [The Library](#the-library)
    * [Arduino](Arduino)
+   * [C++](C++)
+   * [MCU](MCU)
+   * [Python](Python)
   * [Last Comments](#last-comments)
 
 Updates
