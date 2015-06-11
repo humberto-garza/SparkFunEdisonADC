@@ -18,11 +18,9 @@ Description
 This function will read the values from the ADC and send them to the Atom through the **/dev/ttymcu01** file
 Be careful to follow these steps and diagrams to setup your board correctly
 
-
 References
 =================
 > - If you want to know more about the Intel Edison MCU Quark processor, you can go to this site and learn more about it: [Microcontroller MCU Setup Guide](https://software.intel.com/en-us/creating-applications-with-mcu-sdk-for-intel-edison-board)
-
 
 Setting Up
 =================
