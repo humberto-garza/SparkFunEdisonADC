@@ -1,7 +1,7 @@
 Intel Edison SparkfunADC Arduino Library
 ===================
 
-[Back To Index](/..)
+[Back To Index](./)
 
 Description
 -------------
