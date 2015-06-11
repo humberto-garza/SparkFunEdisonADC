@@ -38,4 +38,4 @@ Information
 ===================
 If you need more information about the library, read the description found in the main folder
 
-[Back To Index](#index)
+[Back To Top](#index)

@@ -148,9 +148,8 @@ ___
 >   - 0x101: 2400SPS
 >   - 0x110: 3300SPS
 >   - 0x111: 3300SPS
- 
-___ 
 
+___ 
 > **int comp_mode: Comparator mode**
 
 > - This bit controls the comparator mode of operation.
@@ -172,6 +171,7 @@ ___
 >  - 0x0: The comparator output is active low. *****
 >  - 0x1: ALERT/RDY pin is active high.
  
+___
 > **int comp_que: Comparator queue and disable**
 
 > - These bits perform two functions:
@@ -180,6 +180,37 @@ ___
 >  - 0x00: Assert after one conversion.
 >  - 0x01: Assert after two conversions.
 >  - 0x10: Assert after four conversions
+ 
+___
+> ***set_config_command(...)***
+
+> - This function is the one that will set the specific string to configure the ADC according to what is specified. This will receive some binary parameters in this order:
+> - set_config_command(
+>  - int os, 
+>  - int imc, 
+>  - int pga, 
+>  - int mode, 
+>  - int rate, 
+>  - int comp_mode, 
+>  - int comp_pol, 
+>  - int comp_lat, 
+>  - int comp_que)
+> - An example to declare a value comes as follows:
+int os = 0b0
+> - And the specifications for this value can be checked in this documentation.
+> - You will not need to worry about setting the configuration of the ADC over and over again every time you want to read a different Analog pin or read a different configuration. 
+ > - The configuration string is kept in the object and when you call the "adc_read" it will configure it for you before reading it.
+ 
+___
+>***adc_read()***
+
+> - This command will configure the ADC with the specified parameters; after that, it will read the answer from the ADC, put the reply in the proper order and then return in an integer the value. 
+> - Keep in mind that you may need to do some math in order to use this data; this is the raw data coming from the ADC but put in order
+ 
+___
+>***get_config_command()***
+
+> - This function will only return the command that is being used to configure the ADC, it can be helpful to check in real time what you have just configured.
 
 [Back to Top](#index)
  
