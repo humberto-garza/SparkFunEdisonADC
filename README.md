@@ -180,6 +180,8 @@ ___
 >  - 0x00: Assert after one conversion.
 >  - 0x01: Assert after two conversions.
 >  - 0x10: Assert after four conversions
+
+[Back to Top](#index)
  
 Last Comments
 =================
@@ -187,4 +189,4 @@ Last Comments
 > - This library is configured to work with the default factory circuit. It works with the I2C 0x48 address, it can be modified to work with any other address just by changing some lines in the ***Spark_ADC.cpp***; contact me if you need some guidance
 > - If you need some help to uderstand how do the objects and classes work, here you can find some quick guide: [C++ classes and objects](http://www.cplusplus.com/doc/tutorial/classes/)
 
-___
+[Back to Top](#index)
