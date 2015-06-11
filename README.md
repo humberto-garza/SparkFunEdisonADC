@@ -1,34 +1,47 @@
 SparkFun Block for Intel® Edison - ADC TUTORIAL!
 ===================
 
-Updates!!!!!
--------------
+Index
+=================
+
+  * [Updates](#updates)
+  * [The Hardware](#the-hardware)
+  * [The Code](#the-code)
+  * [Setting The Block Up](#setting-the-block-up)
+  * [Version](#version)
+  * [Compilation](#Compilation)
+  * [Execution](#execution)
+  * [The Library](#the-library)
+   * [Arduino](Arduino)
+  * [Last Comments](#last-comments)
+
+
+
+Updates
+=================
 > - You can connect two different inputs and configure the ADC to display the **difference** between them, even with **negative numbers**! Check this page for more information about the internal hardware [ADS1015 Page 11](http://www.ti.com.cn/cn/lit/ds/symlink/ads1015-q1.pdf). (April/13/2015)
 > - There is now an available **Python library**! it has basically the same behaviour as the C++ library, same functions and explanation, you can see the "Compile" section to read how to get it working. (April/14/2015)
 > - There is now an available **Arduino library**! It was adapted from the C++ library and the main description can be followed to understand the **.ino** behaviour! Go ahead and read this file to understand how it works and how to get to use it! (April/15/2015)
 > - You can now read the ADC Using the **MCU Quark**! Just follow the diagram to connect and if you need extra help to get the setup command, go to the Python folder to read how to get the configuration command in an easy way. (June/2/2015)
 
-----------
-
+[Back to Top](#index)
 
 The Hardware
--------------
+=================
 This is the hardware to use: [SparkFun Block for Intel® Edison - ADC - DEV-13046 - SparkFun Electronics](https://www.sparkfun.com/products/13046)
 
-----------
-
 The Code
--------------
+=================
 This code is in my Github: [humberto-garza/SparkFunEdisonADC · GitHub](https://github.com/humberto-garza/SparkFunEdisonADC)
 
 You can find the Readme Document in the Intel Community here: https://communities.intel.com/docs/DOC-23992 
 
 And the Discussion Can be found here: https://communities.intel.com/message/290450#290450
 
-----------
+[Back to Top](#index)
 
-Setting up the Block
--------------
+Setting The Block Up
+=================
 In order to make this block work, you need to consider several things:
 > - You can use this block with the Arduino Breakout, the Mini-Breakout or by itself.
 > - You can use it from python, node, Arduino IDE, C or C++.
@@ -39,11 +52,10 @@ In order to make this block work, you need to consider several things:
 > - The Reference Voltage is configured by software
 > - If you need to use more than one configuration use the class offered with this sample C++ Library
 
-----------
+[Back to Top](#index)
 
 Version
--------------
-
+=================
  - Make sure that you download the latest [Intel Edison Image](http://www.intel.com/support/edison/sb/CS-035180.htm)
  - If you don't know how to flash this image you can make use of this short [tutorial](http://www.intel.com/support/edison/sb/CS-035286.htm) (Windows, MAC and Linux)
  - If you will use this with the **IoTKit Analytics Platform** make sure that you are using the **1.5.2 version or later**. In order to know your version and update it follow these steps:
@@ -63,10 +75,11 @@ npm install -g npm
 ```
 npm install mraa
 ```
-----------
 
-Compile
--------------
+[Back to Top](#index)
+
+Compilation
+=================
 > C++
 
 > - To copile the main.cpp file just execute this command:
@@ -82,20 +95,21 @@ You can change it if you want, follow this [reference](http://www.cs.fsu.edu/~je
 python main.py
 ```
 
-----------
+[Back to Top](#index)
 
-Execute
--------------
+Execution
+=================
 To execute the program, execute these commands in the linux(yocto) command line (considering your output file is called "a.out"):
 
 ```
 chmod +x a.out
 ./a.out
 ```
-----------
+
+[Back to Top](#index)
 
 The Library
--------------
+=================
 
 **Main.cpp**
 There is a declaration of several variables as ain0_operational status. This variables are used to configure the ADC according to what you want to read from the Analog inputs.
@@ -235,12 +249,12 @@ ____
 
 > - This function will only return the command that is being used to configure the ADC, it can be helpful to check in real time what you have just configured.
 
-----------
+[Back to Top](#index)
+
 Last Comments
--------------------
+=================
 
 > - This library is configured to work with the default factory circuit. It works with the I2C 0x48 address, it can be modified to work with any other address just by changing some lines in the ***Spark_ADC.cpp***; contact me if you need some guidance
-> - I could write the Arduino library if you need it. Just ask for it
 > - If you need some help to uderstand how do the objects and classes work, here you can find some quick guide: [C++ classes and objects](http://www.cplusplus.com/doc/tutorial/classes/)
 
 ___
