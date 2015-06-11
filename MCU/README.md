@@ -1,4 +1,4 @@
-Intel Edison SparkfunADC MCU Function
+Intel Edison Sparkfun ADC MCU Function
 ===================
 
 [Back To Main](../README.md)
@@ -10,6 +10,7 @@ Index
   * [References](#references)
   * [Setting Up](#setting-up)
   * [Information](#information)
+  * [The code](#the-code)
   * [Comments](#comments)
 
 Description
@@ -44,6 +45,11 @@ chmod +x setup_I2C_MCU.sh
 ./setup_I2C_MCU.sh
 ```
 
+Information
+=================
+> - The Function **ADC_read()** returns the value read by the ADC according to the configuration set, it returns an int with the value read scalated 
+> - The value read is sent to the Atom using the file **/dev/ttymcu0**
+
 Comments
 =================
 > - Make sure that the MCU IDE is working with your board correctly before you try this code.
@@ -52,4 +58,4 @@ Comments
 > - If you need some help to change the command to the desired configuration, go to the  [Python Folder](../Python/README.md) to get some help.
 > - If you read the ADC while the MCU is communicating with it, you will get some **Reading Errors**, so make sure that you are only using it with either the Atom or the MCU, never at the same time.
 
-[Back To Top](#index)
+[Back To Top](#intel-edison-sparkfun-adc-mcu-function)

@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 
 	int ain1_operational_status = 				0b0;
 	int ain1_input_multiplexer_configuration = 		0b101;
-	int ain1_programmable_gain_amplifier_configuration =	0b010;
+	int ain1_programmable_gain_amplifier_configuration =	0b001;
 	int ain1_device_operating_mode =			0b0;
 	int ain1_date_rate =					0b100;
 	int ain1_comparator_mode = 				0b0;

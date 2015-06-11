@@ -8,6 +8,7 @@ Index
 
   * [Description](#description)
   * [Execution](#execution)
+  * [The Code](#the-code)
   * [Change the Configuration of the ADC Inputs](#change-the-configuration-of-the-adc-inputs)
    * [References](#references)
    * [Information](#information)
@@ -25,7 +26,16 @@ To execute the Python code you only need to do this from within the folder where
 ```
 python main.py
 ```
+	
+The Code
+=================
+> - Similar to the Arduino sample code, this **main.py** file reads the AIN0 input from the ADC in this range: [0, +2.048V]
+> - It creates an object called ain0 that will be used to read the ADC
+> - You can create as many objects as you please to have different configurations, for example: have one to read AIN0, another to read AIN1 and another one to read the difference of AIN0-AIN1
+> - It then prints the **linux command** that it uses to configure the ADC 
+> - At the en it just prints what it reads from the ADC
 
+___
 Change the Configuration of the ADC Inputs
 ===================
 This tutorial will help you modify the configuration command for the ADC 
@@ -68,5 +78,4 @@ Comments
 > - If you are reading data from the MCU you just need to execute the returned command in the Atom to make sure you are reading what you want
 > - Make sure that the **Spark_ADC.py** file is in the same folder
 
-
-[Back To Top](#index)
+[Back To Top](#intel-edison-sparkfun-adc-python-library)
