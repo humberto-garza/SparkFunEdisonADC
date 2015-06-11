@@ -81,9 +81,9 @@ npm install mraa
 The Library
 =================
 
-**Main.cpp**
+**Main**
+
 There is a declaration of several variables as ain0_operational status. This variables are used to configure the ADC according to what you want to read from the Analog inputs.
-The program has a class named ADC; when you create an ADC object you have to specify its configuration variables. The Default configuration will read only the AN0 comparing it to a Maximum of 4.096V. This main.cpp shows how to use 2 objects to read 2 different analog inputs, you can even declare an object to subtract (compare)  these inputs or even change the reference voltage.
 
 The meaning of this values is specified in the Spark_ADC.cpp file and as follows:
 
@@ -181,46 +181,6 @@ ___
 >  - 0x01: Assert after two conversions.
 >  - 0x10: Assert after four conversions
  
-After you specify the configuration bits, you can create an ADC Object.
-Within the main 2 ADC objects are created: ain0 and ain1.
-In order to configure the object you need to call the function "set_config_command".
-After the object is configured you can still check the configuration parameters using the function "get_config_command"
-In order to read from the ADC using the object configuration the function "adc_read" needs to be called.
-
-> ***set_config_command(...)***
-
-> - This function is the one that will set the specific string to configure the ADC according to what is specified. This will receive some binary parameters in this order:
-> - set_config_command(
->  - int os, 
->  - int imc, 
->  - int pga, 
->  - int mode, 
->  - int rate, 
->  - int comp_mode, 
->  - int comp_pol, 
->  - int comp_lat, 
->  - int comp_que)
-> - An example to declare a value comes as follows:
-int os = 0b0
-> - And the specifications for this value can be checked in this documentation.
-> - You will not need to worry about setting the configuration of the ADC over and over again every time you want to read a different Analog pin or read a different configuration. 
- > - The configuration string is kept in the object and when you call the "adc_read" it will configure it for you before reading it.
-
-____
->***adc_read()***
-
-> - This command will configure the ADC with the specified parameters; after that, it will read the answer from the ADC, put the reply in the proper order and then return in an integer the value. 
-> - Keep in mind that you may need to do some math in order to use this data; this is the raw data coming from the ADC but put in order
-
- ___
- 
- 
->***get_config_command()***
-
-> - This function will only return the command that is being used to configure the ADC, it can be helpful to check in real time what you have just configured.
-
-[Back to Top](#index)
-
 Last Comments
 =================
 
