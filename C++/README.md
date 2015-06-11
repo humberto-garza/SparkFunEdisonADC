@@ -1,4 +1,4 @@
-Intel Edison Sparkfun ADC C++ Library
+Intel Edison Sparkfun ADC CPP Library
 ===================
 
 [Back To Main](../README.md)
@@ -48,4 +48,4 @@ Information
 ===================
 If you need more information about the library, read the description found in the main folder
 
-[Back To Top](#intel-edison-sparkfun-adc-c++-library)
+[Back To Top](#intel-edison-sparkfun-adc-cpp-library)
