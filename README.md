@@ -9,13 +9,11 @@ Index
   * [The Code](#the-code)
   * [Setting The Block Up](#setting-the-block-up)
   * [Version](#version)
-  * [Compilation](#Compilation)
+  * [Compilation](#compilation)
   * [Execution](#execution)
   * [The Library](#the-library)
    * [Arduino](Arduino)
   * [Last Comments](#last-comments)
-
-
 
 Updates
 =================
@@ -29,6 +27,8 @@ Updates
 The Hardware
 =================
 This is the hardware to use: [SparkFun Block for Intel® Edison - ADC - DEV-13046 - SparkFun Electronics](https://www.sparkfun.com/products/13046)
+
+[Back to Top](#index)
 
 The Code
 =================
