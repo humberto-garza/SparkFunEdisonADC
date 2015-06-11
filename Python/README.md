@@ -1,22 +1,42 @@
-Change the Configuration of the ADC Inputs
+Intel Edison Sparkfun ADC Python Library
 ===================
 
-[Back To Index](../README.md)
+[Back To Main](../README.md)
+
+Index
+=================
+
+  * [Description](#description)
+  * [Execution](#execution)
+  * [Change the Configuration of the ADC Inputs](#change-the-configuration-of-the-adc-inputs)
+   * [References](#references)
+   * [Information](#information)
+   * [Comments](#comments)
 
 Description
--------------
+===================
+Library to get to use the SparkfunADC Edison Block Using Python. 
+
+Also, this library will help you get the configuration command in order to get it to work together with the MCU. [Here](#change-the-configuration-of-the-adc-inputs) is a description about how to get that **command**
+
+Execution
+===================
+To execute the Python code you only need to do this from within the folder where both the **main.py** and the **Spark_ADC.py** files are located>
+```
+python main.py
+```
+
+Change the Configuration of the ADC Inputs
+===================
 This tutorial will help you modify the configuration command for the ADC 
 
-----------
-
 References
--------------
-> - If you want to learn more about how this works, you can just go to the [Main Folder](https://github.com/humberto-garza/SparkFunEdisonADC) and go through the description bits information
+=================
+If you want to learn more about how this works, you can just go to the [Main Folder](https://github.com/humberto-garza/SparkFunEdisonADC) and go through the description bits information
 
-----------
 
 Information
--------------
+=================
 > - To change the configuration just open the **config.py** file and change the variables displayed:
  - operational_status =						 0b0
  - input_multiplexer_configuration =			 0b100
@@ -41,14 +61,12 @@ i2cset -y 1 0x48 1 0xe312 w
 ```
 > - Now **i2cset -y 1 0x48 1 0xe312 w** can be executed in the command line to get the readings you specified.
 
-----------
 
 Comments
--------------
+=================
 > - This configuration can be changed even while the MCU is running the reading.
 > - If you are reading data from the MCU you just need to execute the returned command in the Atom to make sure you are reading what you want
 > - Make sure that the **Spark_ADC.py** file is in the same folder
 
-----------
 
-[Back To Index](../README.md)
+[Back To Index](#index)

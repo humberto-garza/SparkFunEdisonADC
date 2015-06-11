@@ -9,10 +9,7 @@ Index
   * [The Code](#the-code)
   * [Setting The Block Up](#setting-the-block-up)
   * [Version](#version)
-  * [Compilation](#compilation)
-  * [Execution](#execution)
   * [The Library](#the-library)
-   * [Change the Configuration of the ADC Inputs](Python)
    * [Arduino](Arduino)
    * [C++](C++)
    * [MCU](MCU)
@@ -78,36 +75,6 @@ npm install -g npm
  - Just in case you want to use the [MRAA Library](http://iotdk.intel.com/docs/master/mraa/index.html) (useful to work with the GPIOs, UART, I2C and so on) you can install it with this command. You can communicate with the ADC directly using this library but I used the system commands in order to make it more simple and easier to move to other languages.
 ```
 npm install mraa
-```
-
-[Back to Top](#index)
-
-Compilation
-=================
-> C++
-
-> - To copile the main.cpp file just execute this command:
-```
-g++ main.cpp
-```
-> - This command will create an executable program called "a.out" (default executable target name).
-You can change it if you want, follow this [reference](http://www.cs.fsu.edu/~jestes/howto/g++compiling.txt) for more information.
-
- > Python
-> - To execute the Python code you only need to do this from within the folder where both the **main.py** and the **Spark_ADC.py** files are located>
-```
-python main.py
-```
-
-[Back to Top](#index)
-
-Execution
-=================
-To execute the program, execute these commands in the linux(yocto) command line (considering your output file is called "a.out"):
-
-```
-chmod +x a.out
-./a.out
 ```
 
 [Back to Top](#index)
