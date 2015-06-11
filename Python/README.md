@@ -1,6 +1,8 @@
 Change the Configuration of the ADC Inputs
 ===================
 
+[Back To Index](../README.md)
+
 Description
 -------------
 This tutorial will help you modify the configuration command for the ADC 
@@ -48,3 +50,5 @@ Comments
 > - Make sure that the **Spark_ADC.py** file is in the same folder
 
 ----------
+
+[Back To Index](../README.md)
