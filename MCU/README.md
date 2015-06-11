@@ -45,7 +45,7 @@ chmod +x setup_I2C_MCU.sh
 ./setup_I2C_MCU.sh
 ```
 
-Information
+The Code
 =================
 > - The Function **ADC_read()** returns the value read by the ADC according to the configuration set, it returns an int with the value read scalated 
 > - The value read is sent to the Atom using the file **/dev/ttymcu0**
