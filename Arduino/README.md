@@ -1,4 +1,4 @@
-Intel Edison SparkfunADC Arduino Library
+Intel Edison Sparkfun ADC Arduino Library
 ===================
 
 [Back To Index](../README.md)
