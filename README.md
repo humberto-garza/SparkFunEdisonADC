@@ -46,9 +46,8 @@ Setting The Block Up
 In order to make this block work, you need to consider several things:
 > - You can use this block with the Arduino Breakout, the Mini-Breakout or by itself.
 > - You can use it from python, node, Arduino IDE, C or C++.
-> - Maximum Voltage Level:
->  - -0.3 to (3.3) + 0.3
->  - I am not sure about this one, check the [schematic](https://cdn.sparkfun.com/datasheets/Dev/Edison/ADC_Block.pdf).
+> - Voltage Range:
+>  - -6.144V to +6.144V
 > - If you need to use the ADC with the Mini-breakout board you will need to cut off the J1 and J2 jumpers and solder the J1pins together.
 > - The Reference Voltage is configured by software
 > - If you need to use more than one configuration use the class offered with this sample C++ Library
