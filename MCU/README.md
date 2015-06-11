@@ -1,6 +1,8 @@
 Intel Edison SparkfunADC MCU Function
 ===================
 
+[Back To Index](../README.md)
+
 Description
 -------------
 This function will read the values from the ADC and send them to the Atom through the **/dev/ttymcu01** file
@@ -48,3 +50,5 @@ Comments
 > - If you read the ADC while the MCU is communicating with it, you will get some **Reading Errors**, so make sure that you are only using it with either the Atom or the MCU, never at the same time.
 
 ----------
+
+[Back To Index](../README.md)
