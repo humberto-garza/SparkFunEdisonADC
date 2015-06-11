@@ -12,7 +12,7 @@ Index
   * [The Library](#the-library)
    * [Arduino](Arduino)
    * [C++](C++)
-   * [MCU](MCU)
+   * [MCU QUARK](MCU)
    * [Python](Python)
   * [Last Comments](#last-comments)
 
@@ -83,7 +83,7 @@ The Library
 
 * [Arduino](Arduino)
 * [C++](C++)
-* [MCU](MCU)
+* [MCU QUARK](MCU)
 * [Python](Python)
 
 You can create as many objects as you please to have different configurations, for example: have one to read AIN0, another to read AIN1 and another one to read the difference of AIN0-AIN1.
