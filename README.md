@@ -81,7 +81,10 @@ npm install mraa
 The Library
 =================
 
-**Main**
+* [Arduino](Arduino)
+* [C++](C++)
+* [MCU](MCU)
+* [Python](Python)
 
 You can create as many objects as you please to have different configurations, for example: have one to read AIN0, another to read AIN1 and another one to read the difference of AIN0-AIN1.
 
