@@ -12,6 +12,7 @@ Index
   * [Compilation](#compilation)
   * [Execution](#execution)
   * [The Library](#the-library)
+   * [Change the Configuration of the ADC Inputs](Python)
    * [Arduino](Arduino)
    * [C++](C++)
    * [MCU](MCU)
