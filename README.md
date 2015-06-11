@@ -56,7 +56,7 @@ In order to make this block work, you need to consider several things:
 
 Version
 =================
- - Make sure that you download the latest [Intel Edison Image](http://www.intel.com/support/edison/sb/CS-035180.htm)
+ - Make sure that you download the latest [Intel Edison Image](https://software.intel.com/en-us/iot/hardware/edison/downloads)
  - If you don't know how to flash this image you can make use of this short [tutorial](http://www.intel.com/support/edison/sb/CS-035286.htm) (Windows, MAC and Linux)
  - If you will use this with the **IoTKit Analytics Platform** make sure that you are using the **1.5.2 version or later**. In order to know your version and update it follow these steps:
 ```
