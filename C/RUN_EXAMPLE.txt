@@ -1,0 +1,105 @@
+root@edison:~/C# gcc main.c -o main.out
+root@edison:~/C# time ./main.out
+=======================================
+Waiting /dev/ttyMFD1 camera to reset: ...
+Reset Status: 0
+=======================================
+
+=======================================
+Entering to Power Saving Mode
+Enter Power Saving Status:  0
+=======================================
+Sleeping for 5 seconds...
+=======================================
+Exiting from Power Saving Mode
+Exit Power Saving Status:  0
+=======================================
+
+=======================================
+Changing BAUD to: 9600
+Change Baud Status:  0
+=======================================
+
+=======================================
+Changing Image Size...
+Resize 00 Status:  0
+=======================================
+Taking Photo...
+Taking Photo Status: 0
+=======================================
+Reading Photo Size: /dev/ttyMFD1...
+XHXL = b76c
+Reading Size Status: 0
+=======================================
+Exporting Photo to buffer...
+Export Status 0
+ff_d8_ff_d9
+=======================================
+Exporting Buffer to photo 6401...
+Done
+=======================================
+Exporting Photo to File 6402...
+Export Status 0
+=======================================
+Stoping Cam: /dev/ttyMFD1...
+Stop Status: 0
+=======================================
+
+=======================================
+Changing Image Size...
+Resize 11 Status:  0
+=======================================
+Taking Photo...
+Taking Photo Status: 0
+=======================================
+Reading Photo Size: /dev/ttyMFD1...
+XHXL = 315c
+Reading Size Status: 0
+=======================================
+Exporting Photo to buffer...
+Export Status 0
+ff_d8_ff_d9
+=======================================
+Exporting Buffer to photo 3201...
+Done
+=======================================
+Exporting Photo to File 3202...
+Export Status 0
+=======================================
+Stoping Cam: /dev/ttyMFD1...
+Stop Status: 0
+=======================================
+
+=======================================
+Changing Image Size...
+Resize 22 Status:  0
+=======================================
+Taking Photo...
+Taking Photo Status: 0
+=======================================
+Reading Photo Size: /dev/ttyMFD1...
+XHXL = 0dfc
+Reading Size Status: 0
+=======================================
+Exporting Photo to buffer...
+Export Status 0
+ff_d8_ff_d9
+=======================================
+Exporting Buffer to photo 1601...
+Done
+=======================================
+Exporting Photo to File 1602...
+Export Status 0
+=======================================
+Stoping Cam: /dev/ttyMFD1...
+Stop Status: 0
+=======================================
+
+=======================================
+Waiting /dev/ttyMFD1 camera to reset: ...
+Reset Status: 0
+=======================================
+
+real    0m48.271s
+user    0m0.040s
+sys     0m0.010s
