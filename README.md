@@ -231,7 +231,7 @@ Last Comments
 LICENSE
 =================
 
-Copyright (c) 2014, Intel Corporation
+Copyright (c) 2015, Intel Corporation
 
 Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:
