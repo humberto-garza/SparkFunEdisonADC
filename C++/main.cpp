@@ -62,6 +62,7 @@ int main(int argc, char *argv[])
 	int ain1_latching_comparator	=						0b0;
 	int ain1_comparator_queue_and_disable =					0b11;
 	
+	//Adc ain1(bus, address);
 	Adc ain1(1, 0x48);
 
 	ain1.set_config_command(
