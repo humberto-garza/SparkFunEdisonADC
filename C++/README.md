@@ -38,7 +38,7 @@ chmod +x a.out
 The Code
 ===================
 > - This **main.cpp** creates a pair of objects (ain0 and ain1)
-> - When ain is created the parameters, you can add the parameters of bus and address; in this case the ADC is connected to the i2c bus 1 and in the address 0x48. If you choose not to specify it will be created with these values
+> - When ain is created, you can add the parameters of **bus** and **address**; in this case the ADC is connected to the i2c bus 1 and in the address 0x48. If you choose not to specify it will be created with these default values
 > - The code configures each object to work simultaneously and read the ADC according to the specific object
 > - ain0 is configured to read the input AIN0 in this range: [0 to +2.048V]
 > - ain1 is configured to read the input AIN1 in this range: [0 to +4.096V]
