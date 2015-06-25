@@ -39,10 +39,45 @@ using namespace std;
 
 ///////////////////////////////////////////////////////////////////////////
 //Constructor
-//Use this default configuration: 0x0 0x100 0x010 0x0 0x100 0x0 0x0 0x0 0x11
+//Use this default configuration:0b0 + 0b100 + 0b010 + 0b0 + 0b100 + 0b0 + 0b0 + 0b0 + 0b11
+Adc::Adc(int bus, int address) 
+{
+	adc = mraa_i2c_init(bus);
+
+	if (mraa_i2c_address(adc, address) != MRAA_SUCCESS)
+   		command = 555;
+   	else
+   	{
+		command = 	0b0000000000000000; //operational_status
+		command += 	0b0000000001000000; //input_multiplexer_configuration
+		command +=	0b0000000000000100; //programmable_gain_amplifier_configuration 
+		command +=	0b0000000000000000; //device_operating_mode 
+		command +=	0b1000000000000000; //date_rate 		
+		command += 	0b0000000000000000; //comparator_mode 
+		command += 	0b0000000000000000; //compulator_polarity 	
+		command +=	0b0000000000000000; //latching_comparator
+		command +=	0b0000001100000000; //comparator_queue_and_disable 		
+   	}
+}
 Adc::Adc() 
 {
-	command = "i2cset -y 1 0x48 1 0x8344 w";
+	adc = mraa_i2c_init(1);
+
+	if (mraa_i2c_address(adc, 0x48) != MRAA_SUCCESS)
+   		command = 555;
+   	else
+   	{
+		command = 	0b0000000000000000; //operational_status
+		command += 	0b0000000001000000; //input_multiplexer_configuration
+		command +=	0b0000000000000100; //programmable_gain_amplifier_configuration 
+		command +=	0b0000000000000000; //device_operating_mode 
+		command +=	0b1000000000000000; //date_rate 		
+		command += 	0b0000000000000000; //comparator_mode 
+		command += 	0b0000000000000000; //compulator_polarity 	
+		command +=	0b0000000000000000; //latching_comparator
+		command +=	0b0000001100000000; //comparator_queue_and_disable 		
+   	}
+
 }
 ///////////////////////////////////////////////////////////////////
 //Set up the ADC register by sending the next bits:
@@ -127,64 +162,47 @@ Adc::Adc()
 
 void Adc::set_config_command(int os, int imc, int pga, int mode, int rate, int comp_mode, int comp_pol, int comp_lat, int comp_que)
 {
-	comp_mode = comp_mode << 12;
-	comp_pol = comp_pol << 11;
-	comp_lat = comp_lat << 10;
-	comp_que = comp_que << 8;
-	os = os << 7;
-	imc = imc << 4;
-	pga = pga << 1;
-	//mode = mode << 0 ;
-	rate = rate << 13;
-	int total = os + imc + pga + mode + rate + comp_mode + comp_pol + comp_lat + comp_que;
-	
-	char numx[256];
-	sprintf(numx,"0x%X",total);
-	command = numx;
-	command = "i2cset -y 1 0x48 1 " + command + " w";
+	rate 		= rate 		<< 13;
+	comp_mode 	= comp_mode << 12;
+	comp_pol 	= comp_pol 	<< 11;
+	comp_lat 	= comp_lat 	<< 10;
+	comp_que 	= comp_que 	<< 8;
+	os 			= os 		<< 7;
+	imc 		= imc 		<< 4;
+	pga 		= pga 		<< 1;
+   //mode 		= mode 		<< 0 ;
+	command = os + imc + pga + mode + rate + comp_mode + comp_pol + comp_lat + comp_que;
 }
-
 
 ///////////////////////////////////////////////////////////////////
 // Read from the I2C device
 // Returns an the value, and a -1 in case it could not read the device
 int Adc::adc_read()
 {
-	system(command.c_str());
-	char buffer[10];
-	string result = "";
-	//i2cset -y 1 0x48 1 0x8344 w
-	FILE* fpipe = popen("i2cget -y 1 0x48 0 w", "r");
-	if (not fpipe) 
-	{
-		pclose(fpipe);
-	    return -1;
-	}	
-	else
-	{
-		std::fgets(buffer, sizeof buffer, fpipe);
-		result += buffer[0]; //0
-		result += buffer[1]; //x 
-		result += buffer[3]; //0
-		result += buffer[4];
-		result += buffer[5];
-		result += buffer[2];
 
-		unsigned int x = strtol(result.c_str(), NULL, 16);
-		pclose(fpipe);
-		if(x > 0x7FF)
-		{
-			int aux =  -1*(~x-0xFFFFF000);
-			return aux;
-		}
-		else
-			return  x;
+	//-2048 is a value that cannot be reported by the ADC so it used as an error code
+	if (mraa_i2c_write_word_data(adc, command, 0x01) != MRAA_SUCCESS)
+		return -2048;
+
+	uint16_t data =	mraa_i2c_read_word_data (adc, 0);
+	
+	int result = 0;
+	result += (data & 0XF000) >>12; 
+	result += (data & 0X00F0) << 4;
+	result += (data & 0X000F) << 4;
+
+	if(result > 0x7FF)
+	{
+		int aux =  -1*(~result-0xFFFFF000);
+		return aux;
 	}
+	else
+		return  result;
 }
 
 ///////////////////////////////////////////////////////////////////
 // Read the object's command 
-string Adc::get_config_command()
+uint16_t Adc::get_config_command()
 {
 	return command;
 }

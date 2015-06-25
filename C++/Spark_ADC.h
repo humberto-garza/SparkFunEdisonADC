@@ -31,19 +31,21 @@ Created by Jose Humberto Garza Rosado
 
 #include <string.h>
 #include <iostream>
-
+#include "mraa.hpp"
 typedef unsigned char byte;
 class Adc 
 {
 	public:
 		Adc();
+		Adc(int bus, int address);
 		//~Adc();	//Destructor 
 		void set_config_command(int os, int imc, int pga, int mode, int rate, int comp_mode, int comp_pol, int comp_lat, int comp_que);
-		std::string get_config_command();
+		uint16_t get_config_command();
 		int adc_read();
 
 	private:
-		std::string command;
+		uint16_t command;
+		mraa_i2c_context adc;
 
 };
 

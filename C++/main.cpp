@@ -25,6 +25,7 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 Created by Jose Humberto Garza Rosado
+gcc main.cpp -lmraa -L../usr/lib/
 */
 //////////////////////////////////////////////////////////////////
 #include <stdlib.h>
@@ -34,6 +35,8 @@ Created by Jose Humberto Garza Rosado
 #include <iostream>
 #include "Spark_ADC.h"
 #include "Spark_ADC.cpp"
+
+#include "mraa.hpp"
 using namespace std;
 
 //////////////////////////////////////////////////////////////////
@@ -49,28 +52,17 @@ using namespace std;
 //////////////////////////////////////////////////////////////////
 int main(int argc, char *argv[])
 {
-
-	int ain0_operational_status = 				0b0;
-	int ain0_input_multiplexer_configuration = 		0b100;
-	int ain0_programmable_gain_amplifier_configuration =	0b010;
-	int ain0_device_operating_mode =			0b0;
-	int ain0_date_rate =					0b100;
-	int ain0_comparator_mode = 				0b0;
-	int ain0_compulator_polarity = 				0b0;
-	int ain0_latching_comparator	=			0b0;
-	int ain0_comparator_queue_and_disable =			0b11;
-	Adc ain0;
-
-	int ain1_operational_status = 				0b0;
-	int ain1_input_multiplexer_configuration = 		0b101;
-	int ain1_programmable_gain_amplifier_configuration =	0b001;
-	int ain1_device_operating_mode =			0b0;
-	int ain1_date_rate =					0b100;
-	int ain1_comparator_mode = 				0b0;
-	int ain1_compulator_polarity = 				0b0;
-	int ain1_latching_comparator	=			0b0;
-	int ain1_comparator_queue_and_disable =			0b11;
-	Adc ain1;
+	int ain1_operational_status = 							0b0;
+	int ain1_input_multiplexer_configuration = 				0b000;
+	int ain1_programmable_gain_amplifier_configuration =	0b010;
+	int ain1_device_operating_mode =						0b0;
+	int ain1_date_rate =									0b100;
+	int ain1_comparator_mode = 								0b0;
+	int ain1_compulator_polarity = 							0b0;
+	int ain1_latching_comparator	=						0b0;
+	int ain1_comparator_queue_and_disable =					0b11;
+	
+	Adc ain1(1, 0x48);
 
 	ain1.set_config_command(
 				ain1_operational_status, 
@@ -84,22 +76,14 @@ int main(int argc, char *argv[])
 				ain1_comparator_queue_and_disable
 				);
 
-	ain0.set_config_command(
-				ain0_operational_status, 
-				ain0_input_multiplexer_configuration, 
-				ain0_programmable_gain_amplifier_configuration, 
-				ain0_device_operating_mode, 
-				ain0_date_rate, 
-				ain0_comparator_mode, 
-				ain0_compulator_polarity, 
-				ain0_latching_comparator,
-				ain0_comparator_queue_and_disable
-				);
-
-	cout<<ain0.get_config_command()<<endl;
-	cout<<"AIN0: "<<ain0.adc_read()<<endl;
 	cout<<ain1.get_config_command()<<endl;
-	cout<<"AIN1: "<<ain1.adc_read()<<endl;
+	
+	int x =0;
+	while(x < 1000) //0.79 seconds
+	{
+		cout<<ain1.adc_read()<<endl;
+		x++;
+	}	
 
 	return 0;
 }
