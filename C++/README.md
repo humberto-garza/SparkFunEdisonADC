@@ -12,6 +12,7 @@ Index
   * [The Code](#the-code)
   * [Information](#information)
   * [LICENSE](#license)
+  
 Description
 ===================
 Library to get to use the SparkfunADC Edison using C++
