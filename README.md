@@ -19,6 +19,8 @@ Index
 
 Updates
 =================
+> - Now the C++ can read up to 1265 samples per second with MRAA
+> - Improved and faster python library with MRAA
 > - You can connect two different inputs and configure the ADC to display the **difference** between them, even with **negative numbers**! Check this page for more information about the internal hardware [ADS1015 Page 11](http://www.ti.com.cn/cn/lit/ds/symlink/ads1015-q1.pdf). (April/13/2015)
 > - There is now an available **Python library**! it has basically the same behaviour as the C++ library, same functions and explanation, you can see the "Compile" section to read how to get it working. (April/14/2015)
 > - There is now an available **Arduino library**! It was adapted from the C++ library and the main description can be followed to understand the **.ino** behaviour! Go ahead and read this file to understand how it works and how to get to use it! (April/15/2015)
